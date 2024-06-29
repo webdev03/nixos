@@ -1,0 +1,56 @@
+window {
+    background-color: transparent;
+}
+window .bar {
+    color: #EBF2FA;
+    margin: 8px;
+}
+
+button {
+    min-width: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 999px;
+    color: #EDF2FA;
+}
+
+button:active {
+    background-color: #7CC0EB;
+}
+
+button:hover {
+    border-bottom: 3px solid #EDF2FA;
+}
+
+.volume {
+    background-color: #1E2329;
+    border-radius: 999px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.volume-slider {
+    min-width: 50px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.workspaces button.focused {
+    border-bottom: 3px solid #7CC0EB;
+}
+
+.workspaces button {
+    margin: 4px;
+    padding: 4px;
+    background-color: #1E2329;
+    border-bottom: 3px solid #1E2329;
+}
+
+.stat-box {
+    margin: 4px;
+    padding: 4px;
+    background-color: #1E2329;
+    border-radius: 999px;
+}
