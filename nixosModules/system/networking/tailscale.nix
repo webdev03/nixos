@@ -10,13 +10,6 @@
   config = lib.mkIf config.system.tailscale.enable {
     services.tailscale.enable = true;
     networking.search = ["tail3bfb6.ts.net"]; # My tailnet
-    systemd.services."tailscale-fix" = {
-      enable = true;
-      after = ["tailscaled.target"];
-      serviceConfig = {
-        ExecStart = "/run/current-system/sw/bin/true";
-        ExecStop = "${pkgs.systemd}/bin/systemctl kill --signal=KILL tailscaled";
-      };
-    };
+    systemd.services.tailscaled.serviceConfig.TimeoutStopSec = 3;
   };
 }
