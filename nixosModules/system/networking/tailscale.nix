@@ -12,9 +12,10 @@
     networking.search = ["tail3bfb6.ts.net"]; # My tailnet
     systemd.services."tailscale-fix" = {
       enable = true;
-      wantedBy = ["shutdown.target"];
+      after = ["tailscaled.target"];
       serviceConfig = {
-        ExecStart = "${pkgs.systemd}/bin/systemctl kill --signal=KILL tailscaled";
+        ExecStart = "";
+        ExecStop = "${pkgs.systemd}/bin/systemctl kill --signal=KILL tailscaled";
       };
     };
   };
