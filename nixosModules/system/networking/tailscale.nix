@@ -14,7 +14,7 @@
       enable = true;
       after = ["tailscaled.target"];
       serviceConfig = {
-        ExecStart = "";
+        ExecStart = "/run/current-system/sw/bin/true";
         ExecStop = "${pkgs.systemd}/bin/systemctl kill --signal=KILL tailscaled";
       };
     };
