@@ -7,6 +7,7 @@
     ./desktop/hyprland.nix
 
     ./cliPrograms/alejandra.nix
+    ./cliPrograms/breaktime.nix
     ./cliPrograms/btop.nix
     ./cliPrograms/bun.nix
     ./cliPrograms/cava.nix
