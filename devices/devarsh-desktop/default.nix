@@ -16,7 +16,7 @@
 
   # desktop.kde.enable = true;
   desktop.hyprland.enable = true;
-  desktop.sddm-theme.enable = true;
+  # desktop.sddm-theme.enable = true;
 
   users.users.devarsh = {
     isNormalUser = true;

@@ -9,8 +9,8 @@
   };
   config = lib.mkIf config.desktop.hyprland.enable {
     services.xserver.enable = true;
-    services.displayManager.sddm.enable = true;
-    services.displayManager.sddm.wayland.enable = true;
+    # services.displayManager.sddm.enable = true;
+    # services.displayManager.sddm.wayland.enable = true;
     programs.hyprland.enable = true;
 
     services.gnome.gnome-keyring.enable = true;
