@@ -23,7 +23,7 @@
         ExecStart = "${
           lib.getExe
           (pkgs.writers.writePython3Bin "breaktime" {
-              flakeIgnore = ["E265" "E255"];
+              flakeIgnore = ["E265" "E255" "E111" "E302" "E305" "E501"];
             } ''
               from time import sleep
               import subprocess
