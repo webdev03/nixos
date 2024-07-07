@@ -17,6 +17,8 @@
     nixpkgs,
     ...
   } @ inputs: {
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
+
     nixosConfigurations = {
       devarsh-desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};

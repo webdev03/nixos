@@ -6,7 +6,6 @@
   imports = [
     ./desktop/hyprland.nix
 
-    ./cliPrograms/alejandra.nix
     ./cliPrograms/breaktime.nix
     ./cliPrograms/btop.nix
     ./cliPrograms/bun.nix
@@ -29,7 +28,6 @@
 
   hyprland.enable = lib.mkDefault false;
 
-  cliPrograms.alejandra.enable = lib.mkDefault true;
   cliPrograms.breaktime.enable = lib.mkDefault false;
   cliPrograms.btop.enable = lib.mkDefault true;
   cliPrograms.bun.enable = lib.mkDefault true;
