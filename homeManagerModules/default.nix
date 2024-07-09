@@ -37,7 +37,7 @@
   cliPrograms.hyperfine.enable = lib.mkDefault true;
   cliPrograms.tree.enable = lib.mkDefault true;
 
-  guiPrograms.blender.enable = lib.mkDefault true;
+  guiPrograms.blender.enable = lib.mkDefault false;
   guiPrograms.firefox.enable = lib.mkDefault true;
   guiPrograms.kitty.enable = lib.mkDefault true;
   guiPrograms.krita.enable = lib.mkDefault true;
