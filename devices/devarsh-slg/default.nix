@@ -18,7 +18,8 @@
 
   networking.hostName = "devarsh-slg"; # Don't change this!.
 
-  desktop.kde.enable = true;
+  # desktop.kde.enable = true;
+  desktop.hyprland.enable = true;
 
   # Power saving functionality
   powerManagement.enable = true;
