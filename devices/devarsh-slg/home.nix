@@ -15,4 +15,5 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   hyprland.enable = true;
+  wayland.windowManager.hyprland.settings.monitor = ["eDP-1,preferred,auto,1"];
 }

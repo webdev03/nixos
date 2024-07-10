@@ -17,7 +17,7 @@
       settings = {
         # https://wiki.hyprland.org/Configuring/Configuring-Hyprland/
         ### MONITORS
-        monitor = ["desc:LG Display 0x0555,preferred,auto,1" ",preferred,auto,auto"];
+        monitor = [",preferred,auto,auto"];
         ### PROGRAMS
         "$terminal" = "kitty";
         "$fileManager" = "dolphin";
