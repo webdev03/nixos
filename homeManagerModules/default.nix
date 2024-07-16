@@ -15,6 +15,7 @@
     ./cliPrograms/tree.nix
 
     ./guiPrograms/blender.nix
+    ./guiPrograms/boxes.nix
     ./guiPrograms/firefox.nix
     ./guiPrograms/kitty.nix
     ./guiPrograms/krita.nix
@@ -38,6 +39,7 @@
   cliPrograms.tree.enable = lib.mkDefault true;
 
   guiPrograms.blender.enable = lib.mkDefault false;
+  guiPrograms.boxes.enable = lib.mkDefault false;
   guiPrograms.firefox.enable = lib.mkDefault true;
   guiPrograms.kitty.enable = lib.mkDefault true;
   guiPrograms.krita.enable = lib.mkDefault true;

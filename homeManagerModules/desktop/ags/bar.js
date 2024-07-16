@@ -89,6 +89,7 @@ const Battery = () => {
         css: battery
           .bind("percent")
           .as((percent) => `color: ${percent > 15 ? "#EDF2FA" : "#E02828"};`),
+        class_name: "battery"
       }),
       Widget.Label({
         label: battery.bind("percent").as((percent) => `${percent}%`),
@@ -100,7 +101,7 @@ const Battery = () => {
           ),
       }),
     ],
-    visible: battery.bind("available"),
+    visible: !battery.bind("available"),
     class_name: "stat-box",
     "tooltip-text": timeRemaining,
   });

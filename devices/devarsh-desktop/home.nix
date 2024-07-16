@@ -18,4 +18,6 @@
   cliPrograms.breaktime.enable = true;
 
   cliPrograms.git.gh.enable = true;
+
+  guiPrograms.boxes.enable = true;
 }
