@@ -97,11 +97,11 @@ const Battery = () => {
           .bind("percent")
           .as(
             (percent) =>
-              `margin-left: 3px; color: ${percent > 15 ? "#EDF2FA" : "#E02828"};`,
-          ),
-      }),
+              `margin-left: 4px; margin-right: 4px; color: ${percent > 20 ? "#EDF2FA" : "#E02828"};`,
+          )
+      })
     ],
-    visible: !battery.bind("available"),
+    visible: battery.bind("available"),
     class_name: "stat-box",
     "tooltip-text": timeRemaining,
   });
