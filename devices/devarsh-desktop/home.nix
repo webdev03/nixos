@@ -20,4 +20,5 @@
   cliPrograms.git.gh.enable = true;
 
   guiPrograms.boxes.enable = true;
+  guiPrograms.kicad.enable = true;
 }

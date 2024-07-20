@@ -17,6 +17,7 @@
     ./guiPrograms/blender.nix
     ./guiPrograms/boxes.nix
     ./guiPrograms/firefox.nix
+    ./guiPrograms/kicad.nix
     ./guiPrograms/kitty.nix
     ./guiPrograms/krita.nix
     ./guiPrograms/vlc.nix
@@ -41,6 +42,7 @@
   guiPrograms.blender.enable = lib.mkDefault false;
   guiPrograms.boxes.enable = lib.mkDefault false;
   guiPrograms.firefox.enable = lib.mkDefault true;
+  guiPrograms.kicad.enable = lib.mkDefault false;
   guiPrograms.kitty.enable = lib.mkDefault true;
   guiPrograms.krita.enable = lib.mkDefault true;
   guiPrograms.vlc.enable = lib.mkDefault true;
