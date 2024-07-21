@@ -57,4 +57,23 @@
   services.power-profiles-daemon.enable = lib.mkForce false;
 
   programs.dconf.enable = lib.mkDefault true; # some apps need dconf to work properly
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+      ovmf = {
+        enable = true;
+        packages = [
+          (pkgs.OVMF.override {
+            secureBoot = true;
+            tpmSupport = true;
+          })
+          .fd
+        ];
+      };
+    };
+  };
+  virtualisation.spiceUSBRedirection.enable = true;
 }
