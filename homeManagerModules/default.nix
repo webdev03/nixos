@@ -39,7 +39,7 @@
   cliPrograms.hyperfine.enable = lib.mkDefault true;
   cliPrograms.tree.enable = lib.mkDefault true;
 
-  guiPrograms.blender.enable = lib.mkDefault false;
+  guiPrograms.blender.enable = lib.mkDefault true;
   guiPrograms.boxes.enable = lib.mkDefault false;
   guiPrograms.firefox.enable = lib.mkDefault true;
   guiPrograms.kicad.enable = lib.mkDefault false;
