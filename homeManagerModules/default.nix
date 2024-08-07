@@ -20,6 +20,7 @@
     ./guiPrograms/kicad.nix
     ./guiPrograms/kitty.nix
     ./guiPrograms/krita.nix
+    ./guiPrograms/obs-studio.nix
     ./guiPrograms/vlc.nix
     ./guiPrograms/vscodium.nix
   ];
@@ -45,6 +46,7 @@
   guiPrograms.kicad.enable = lib.mkDefault false;
   guiPrograms.kitty.enable = lib.mkDefault true;
   guiPrograms.krita.enable = lib.mkDefault true;
+  guiPrograms.obs-studio.enable = lib.mkDefault true;
   guiPrograms.vlc.enable = lib.mkDefault true;
   guiPrograms.vscodium.enable = lib.mkDefault true;
 }
