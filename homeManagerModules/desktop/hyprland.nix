@@ -283,7 +283,7 @@
       };
 
       iconTheme = {
-        package = pkgs.gnome.adwaita-icon-theme;
+        package = pkgs.adwaita-icon-theme;
         name = "Adwaita";
       };
 
@@ -303,6 +303,6 @@
 
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
 
-    home.packages = with pkgs; [xfce.thunar gnome.seahorse libsecret grim slurp wl-clipboard libnotify brightnessctl kdePackages.ark];
+    home.packages = with pkgs; [xfce.thunar seahorse libsecret grim slurp wl-clipboard libnotify brightnessctl kdePackages.ark];
   };
 }
