@@ -295,7 +295,9 @@
 
     qt = {
       enable = true;
-      platformTheme = "adwaita";
+      platformTheme = {
+        name = "adwaita";
+      };
       style = {
         name = "adwaita";
       };
