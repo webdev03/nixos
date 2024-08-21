@@ -18,5 +18,7 @@
     security.pam.services.sddm.enableGnomeKeyring = true;
 
     security.pam.services.hyprlock = {};
+    
+    services.gvfs.enable = true;
   };
 }

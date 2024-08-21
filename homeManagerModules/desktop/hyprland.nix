@@ -305,6 +305,6 @@
 
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
 
-    home.packages = with pkgs; [xfce.thunar seahorse libsecret grim slurp wl-clipboard libnotify brightnessctl kdePackages.ark];
+    home.packages = with pkgs; [nautilus seahorse libsecret grim slurp wl-clipboard libnotify brightnessctl kdePackages.ark];
   };
 }
