@@ -9,6 +9,6 @@
   };
 
   config = lib.mkIf config.guiPrograms.kicad.enable {
-    home.packages = [pkgs.kicad];
+    home.packages = [pkgs.kicad-small];
   };
 }
