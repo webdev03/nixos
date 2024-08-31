@@ -9,6 +9,6 @@
   };
 
   config = lib.mkIf config.guiPrograms.boxes.enable {
-    home.packages = [pkgs.gnome.gnome-boxes];
+    home.packages = [pkgs.gnome-boxes];
   };
 }
