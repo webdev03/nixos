@@ -30,6 +30,7 @@
   programs.home-manager.enable = lib.mkDefault true;
 
   hyprland.enable = lib.mkDefault false;
+  hyprland.powerSave = lib.mkDefault false;
 
   cliPrograms.breaktime.enable = lib.mkDefault false;
   cliPrograms.btop.enable = lib.mkDefault true;
