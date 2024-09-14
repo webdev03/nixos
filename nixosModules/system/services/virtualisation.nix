@@ -7,7 +7,7 @@
   options = {
     system.virtualisation.enable = lib.mkEnableOption "Virtualisation";
   };
-  config = lib.mkIf system.virtualisation.enable {
+  config = lib.mkIf config.system.virtualisation.enable {
     virtualisation.libvirtd = {
       enable = true;
       qemu = {
