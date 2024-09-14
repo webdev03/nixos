@@ -237,7 +237,7 @@
     };
 
     services.hypridle = {
-      enable = true;
+      enable = config.hyprland.powerSave;
       settings = {
         general = {
           lock_cmd = "pidof hyprlock || hyprlock";
@@ -246,33 +246,26 @@
           before_sleep_cmd = "loginctl lock-session";
           after_sleep_cmd = "hyprctl dispatch dpms on && hyprctl dispatch exec -- ags -q && sleep 1 && hyprctl dispatch exec -- ags";
         };
-        listener =
-          [
-            {
-              timeout = "60";
-              "on-timeout" = "brightnessctl -s set 20";
-              "on-resume" = "brightnessctl -r";
-            }
-            {
-              timeout = "120";
-              "on-timeout" = "loginctl lock-session";
-            }
-            {
-              timeout = "150";
-              "on-timeout" = "hyprctl dispatch dpms off";
-              "on-resume" = "hyprctl dispatch dpms on && hyprctl dispatch exec -- ags -q && sleep 1 && hyprctl dispatch exec -- ags";
-            }
-          ]
-          ++ (
-            if config.hyprland.powerSave
-            then [
-              {
-                timeout = "300";
-                "on-timeout" = "systemctl suspend";
-              }
-            ]
-            else []
-          );
+        listener = [
+          {
+            timeout = "60";
+            "on-timeout" = "brightnessctl -s set 20";
+            "on-resume" = "brightnessctl -r";
+          }
+          {
+            timeout = "120";
+            "on-timeout" = "loginctl lock-session";
+          }
+          {
+            timeout = "150";
+            "on-timeout" = "hyprctl dispatch dpms off";
+            "on-resume" = "hyprctl dispatch dpms on && hyprctl dispatch exec -- ags -q && sleep 1 && hyprctl dispatch exec -- ags";
+          }
+          {
+            timeout = "300";
+            "on-timeout" = "systemctl suspend";
+          }
+        ];
       };
     };
 

@@ -12,6 +12,12 @@
   # Weird bug with Surface Laptop Go screen, turn off Intel PSR
   boot.kernelParams = ["i915.enable_psr=0"];
 
+  # Weird bug with my lid sensor, turn off lid sensor
+  services.logind = {
+    powerKey = "lock";
+    lidSwitch = "ignore";
+  };
+
   boot.initrd.availableKernelModules = ["xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
