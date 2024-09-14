@@ -23,6 +23,7 @@
     ./system/programs/nh.nix
 
     ./system/services/cups.nix
+    ./system/services/virtualisation.nix
   ];
 
   system.bluetooth.enable = lib.mkDefault true;
@@ -49,6 +50,8 @@
 
   networking.networkmanager.enable = lib.mkDefault true;
 
+  system.virtualisation.enable = lib.mkDefault false;
+
   time.timeZone = lib.mkDefault "Pacific/Auckland";
   i18n.defaultLocale = lib.mkDefault "en_NZ.UTF-8";
 
@@ -57,23 +60,4 @@
   services.power-profiles-daemon.enable = lib.mkForce false;
 
   programs.dconf.enable = lib.mkDefault true; # some apps need dconf to work properly
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu = {
-      package = pkgs.qemu_kvm;
-      runAsRoot = true;
-      swtpm.enable = true;
-      ovmf = {
-        enable = true;
-        packages = [
-          (pkgs.OVMF.override {
-            secureBoot = true;
-            tpmSupport = true;
-          })
-          .fd
-        ];
-      };
-    };
-  };
-  virtualisation.spiceUSBRedirection.enable = true;
 }

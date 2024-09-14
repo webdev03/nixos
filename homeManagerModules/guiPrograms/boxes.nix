@@ -4,6 +4,7 @@
   config,
   ...
 }: {
+  # system.virtualisation.enable must be on in the NixOS config!!
   options = {
     guiPrograms.boxes.enable = lib.mkEnableOption "GNOME Boxes";
   };

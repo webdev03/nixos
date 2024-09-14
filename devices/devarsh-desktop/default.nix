@@ -18,6 +18,8 @@
   desktop.hyprland.enable = true;
   # desktop.sddm-theme.enable = true;
 
+  system.virtualisation.enable = true;
+
   users.users.devarsh = {
     isNormalUser = true;
     extraGroups = ["wheel"];
