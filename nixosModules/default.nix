@@ -60,4 +60,6 @@
   services.power-profiles-daemon.enable = lib.mkForce false;
 
   programs.dconf.enable = lib.mkDefault true; # some apps need dconf to work properly
+
+  programs.nix-ld.enable = true; # fix random binaries
 }
