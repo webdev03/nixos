@@ -29,6 +29,8 @@
   home.homeDirectory = lib.mkDefault "/home/devarsh";
   programs.home-manager.enable = lib.mkDefault true;
 
+  home.packages = with pkgs; [gcc];
+
   hyprland.enable = lib.mkDefault false;
   hyprland.powerSave = lib.mkDefault false;
 
