@@ -20,5 +20,5 @@
   cliPrograms.git.gh.enable = true;
 
   guiPrograms.boxes.enable = true;
-  guiPrograms.kicad.enable = true;
+  guiPrograms.kicad.enable = false; # too much resources used in compilation
 }
