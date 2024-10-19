@@ -10,6 +10,7 @@
     ./cliPrograms/btop.nix
     ./cliPrograms/bun.nix
     ./cliPrograms/cava.nix
+    ./cliPrograms/deno.nix
     ./cliPrograms/git.nix
     ./cliPrograms/hyperfine.nix
     ./cliPrograms/tree.nix
@@ -38,6 +39,7 @@
   cliPrograms.btop.enable = lib.mkDefault true;
   cliPrograms.bun.enable = lib.mkDefault true;
   cliPrograms.cava.enable = lib.mkDefault true;
+  cliPrograms.deno.enable = lib.mkDefault true;
   cliPrograms.git.enable = lib.mkDefault true;
   cliPrograms.git.gh.enable = lib.mkDefault false;
   cliPrograms.hyperfine.enable = lib.mkDefault true;
