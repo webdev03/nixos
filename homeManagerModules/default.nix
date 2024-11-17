@@ -38,7 +38,7 @@
   cliPrograms.breaktime.enable = lib.mkDefault false;
   cliPrograms.btop.enable = lib.mkDefault true;
   cliPrograms.bun.enable = lib.mkDefault true;
-  cliPrograms.cava.enable = lib.mkDefault true;
+  cliPrograms.cava.enable = lib.mkDefault false; # Cava is broken for now
   cliPrograms.deno.enable = lib.mkDefault true;
   cliPrograms.git.enable = lib.mkDefault true;
   cliPrograms.git.gh.enable = lib.mkDefault false;

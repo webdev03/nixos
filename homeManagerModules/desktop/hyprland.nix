@@ -24,7 +24,7 @@
         "$fileManager" = "dolphin";
         "$menu" = "tofi-drun --drun-launch=true";
         ### AUTOSTART
-        "exec-once" = "ags & gnome-keyring-daemon -d --start --components=pkcs11,secrets,ssh";
+        "exec-once" = "ags run & gnome-keyring-daemon -d --start --components=pkcs11,secrets,ssh";
         ### ENVIRONMENT VARIABLES
         env = [
           "XCURSOR_SIZE,24"
@@ -44,10 +44,12 @@
           rounding = "10";
           active_opacity = "1.0";
           inactive_opacity = "1.0";
-          drop_shadow = !config.hyprland.powerSave;
-          shadow_range = "4";
-          shadow_render_power = "3";
-          "col.shadow" = "rgba(1a1a1aee)";
+          shadow = {
+            color = "rgba(1a1a1aee)";
+            render_power = "3";
+            range = "4";
+            enabled = !config.hyprland.powerSave;
+          };
           blur = {
             enabled = !config.hyprland.powerSave;
             size = "3";
@@ -148,6 +150,12 @@
         gtksourceview
         webkitgtk_4_0
         accountsservice
+
+        inputs.ags.packages.${pkgs.system}.hyprland
+        inputs.ags.packages.${pkgs.system}.tray
+        inputs.ags.packages.${pkgs.system}.battery
+        inputs.ags.packages.${pkgs.system}.network
+        inputs.ags.packages.${pkgs.system}.wireplumber
       ];
     };
 
@@ -306,6 +314,6 @@
 
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
 
-    home.packages = with pkgs; [nautilus seahorse libsecret grim slurp wl-clipboard libnotify brightnessctl kdePackages.ark];
+    home.packages = with pkgs; [nautilus seahorse libsecret grim slurp wl-clipboard libnotify brightnessctl kdePackages.ark hyprpicker];
   };
 }

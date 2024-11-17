@@ -1,0 +1,25 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+$theme_fg_color: "@theme_fg_color";
+$theme_bg_color: "@theme_bg_color";
+
+window {
+    background-color: transparent;
+}
+
+window.Bar {
+    background: transparent;
+    color: #{$theme_bg_color};
+    font-weight: bold;
+
+    >centerbox {
+        background: rgb(236,125,43);
+        background: linear-gradient(90deg, rgba(236,125,43,0.9) 0%, rgba(252,229,113,0.9) 100%); 
+        border-radius: 10px;
+        margin: 8px;
+    }
+
+    button {
+        border-radius: 8px;
+        margin: 2px;
+    }
+}
