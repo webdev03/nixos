@@ -12,8 +12,7 @@ window.Bar {
     font-weight: bold;
 
     >centerbox {
-        background: rgb(236,125,43);
-        background: linear-gradient(90deg, rgba(236,125,43,0.9) 0%, rgba(252,229,113,0.9) 100%); 
+        background: transparent;
         border-radius: 10px;
         margin: 8px;
     }
@@ -21,5 +20,19 @@ window.Bar {
     button {
         border-radius: 8px;
         margin: 2px;
+    }
+
+    .gap-children * {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    .workspace-btn {
+        border-radius: 50%;
+        border-bottom: 4px solid transparent;
+    }
+
+    .focused-workspace {
+        border-bottom: 4px solid #24c0c0;
     }
 }
