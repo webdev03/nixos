@@ -35,4 +35,19 @@ window.Bar {
     .focused-workspace {
         border-bottom: 4px solid #24c0c0;
     }
+
+    .AudioSlider {
+        min-width: 6em;
+
+        icon {
+            margin-right: .6em;
+        }
+
+        .slider {
+            min-width: 80px;
+            border-radius: 999px;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+    }
 }

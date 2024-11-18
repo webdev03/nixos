@@ -1,11 +1,28 @@
+// Based on https://github.com/Aylur/astal/blob/48692ff557f5f9e95744f939e3fcd1054badb585/examples/js/simple-bar/widget/Bar.tsx
+// Original License: GNU LGPL v2.1 https://github.com/Aylur/astal/blob/48692ff557f5f9e95744f939e3fcd1054badb585/LICENSE
+
 import { App, Astal, Gtk, Gdk } from "astal/gtk3"
 import { Variable, bind } from "astal"
 
 import Hyprland from "gi://AstalHyprland";
-import Tray from "gi://AstalTray";
+// TODO: import Tray from "gi://AstalTray";
 import Battery from "gi://AstalBattery";
 import Network from "gi://AstalNetwork";
 import AudioWp from "gi://AstalWp";
+
+function VolumeWidget() {
+    const audio = AudioWp.get_default()?.audio;
+    if (!audio?.defaultSpeaker) throw Error("NO AUDIO SPEAKER!!")
+    return <box className="AudioSlider" tooltipText={bind(audio.defaultSpeaker, "volume").as(x => `Volume ${Math.floor(x * 100)}%`)}>
+        <icon icon={bind(audio.defaultSpeaker, "volumeIcon")} />
+        <slider
+            className="slider"
+            hexpand
+            onDragged={({ value }) => audio.defaultSpeaker.volume = value}
+            value={bind(audio.defaultSpeaker, "volume")}
+        />
+    </box>
+}
 
 function WorkspacesWidget() {
     const hypr = Hyprland.get_default();
@@ -40,10 +57,9 @@ function NetworkWidget() {
 
 function BatteryWidget() {
     const bat = Battery.get_default();
-    print(bat.percentage)
     return <box css={bind(bat, "percentage").as(x => x > 20 ? "color:#EDF2FA" : "color:#E02828")}>
         <icon icon={bind(bat, "batteryIconName")} />
-    </box>
+    </box>;
 }
 
 function DayWidget() {
@@ -73,9 +89,10 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
             </box>
             <DayWidget />
             <box hexpand halign={Gtk.Align.END} className="gap-children">
+                <VolumeWidget />
                 <TimeWidget />
                 <NetworkWidget />
-                <BatteryWidget />
+                {Battery.get_default().isBattery ? <BatteryWidget /> : null}
             </box>
         </centerbox>
     </window>
