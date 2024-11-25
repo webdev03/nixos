@@ -22,7 +22,7 @@
 
   users.users.devarsh = {
     isNormalUser = true;
-    extraGroups = ["wheel"];
+    extraGroups = ["wheel" "networkmanager" "dialout"];
   };
 
   home-manager = {

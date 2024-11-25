@@ -35,7 +35,7 @@
   # Define a user account. Don't forget to set a password with `passwd`.
   users.users.devarsh = {
     isNormalUser = true;
-    extraGroups = ["wheel" "networkmanager"]; # Enable `sudo` for the user.
+    extraGroups = ["wheel" "networkmanager" "dialout"]; # Enable `sudo` for the user.
   };
 
   home-manager = {
