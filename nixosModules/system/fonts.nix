@@ -10,7 +10,8 @@
 
   config = lib.mkIf config.system.fonts.enable {
     fonts.packages = [
-      (pkgs.nerdfonts.override {fonts = ["JetBrainsMono" "IntelOneMono"];})
+      pkgs.nerd-fonts.jetbrains-mono
+      pkgs.nerd-fonts.intone-mono
     ];
   };
 }
