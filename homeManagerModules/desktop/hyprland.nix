@@ -279,8 +279,8 @@
 
     home.pointerCursor = {
       gtk.enable = true;
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Classic";
+      package = pkgs.whitesur-cursors;
+      name = "WhiteSur";
       size = 24;
     };
 
