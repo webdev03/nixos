@@ -280,7 +280,7 @@
     home.pointerCursor = {
       gtk.enable = true;
       package = pkgs.whitesur-cursors;
-      name = "WhiteSur";
+      name = "WhiteSur-cursors";
       size = 24;
     };
 
